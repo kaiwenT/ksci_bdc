@@ -1,0 +1,32 @@
+model01:
+    activation: relu loss function: cross_entropy learning_rate:0.0001 iter:3400 loss: 0.35
+    结构：
+    输入 --> 卷积 --> 卷积 --> 全连接 --> 全连接 --> 输出
+    3x23 --> 3x3x64 --> 3x3x128 --> 1024 --> 1024 --> 2
+    结果集 = 预测活跃用户∪训练集中活跃的用户
+    得分：prediction01_1 score:0.8069
+model02:
+    learning_rate:0.00001 iter:400 loss: 0.42
+    learning_rate:0.00001 iter:2000 loss: 0.3879 + learning_rate:0.000001 iter:500
+    结构：
+    输入 --> 卷积 --> 卷积 --> 全连接 --> 全连接 --> 输出
+    3x23 --> 3x3x128 --> 3x3x256 --> 1024 --> 1024 --> 2
+    得分：prediction02 score:0.8069
+
+model03:
+    learning_rate:0.00001 iter:400 loss: 0.42
+    learning_rate:0.00001 iter:2000 loss: 0.3879 + learning_rate:0.000001 iter:500
+    结构：
+    输入 --> 卷积 --> 卷积 --> 全连接 --> 全连接 --> 输出
+    4x23 --> 3x3x64 --> 3x3x128 --> 1024 --> 1024 --> 2
+    得分：prediction03_1 score:0.76
+
+model05:
+    activation: tanh loss function: cross_entropy learning_rate:0.00001 iter:1000 loss: 0.35
+    4: 0.33
+    5: 0.26
+    结构：
+    输入 --> 卷积 --> 卷积 --> 全连接 --> 全连接 --> 输出
+    3x23 --> 3x3x64 --> 3x3x128 --> 1024 --> 1024 --> 2
+    结果集 = 预测活跃用户∪训练集中活跃的用户
+    得分：prediction05_1 score:0.
