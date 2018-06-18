@@ -18,8 +18,8 @@ def train(x, y):
     bst = xgb.train(param, dtrain, num_round)
     bst.save_model('G:/models/ksci_bdc_model/model_xgboost/002.model')
 
-    # xgb.plot_importance(bst)
-    # plt.show()
+    xgb.plot_importance(bst)
+    plt.show()
 
 
 def evaluate(data, label):
